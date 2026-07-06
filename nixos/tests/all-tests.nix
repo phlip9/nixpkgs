@@ -759,6 +759,7 @@ in
   hound = runTest ./hound.nix;
   hub = runTest ./git/hub.nix;
   hydra = runTest ./hydra;
+  hyperdx = runTest ./hyperdx.nix;
   i18n = runTest ./i18n.nix;
   i3wm = runTest ./i3wm.nix;
   icecast = runTest ./icecast.nix;

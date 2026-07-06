@@ -1,0 +1,48 @@
+diff --git a/packages/app/src/fonts.ts b/packages/app/src/fonts.ts
+--- a/packages/app/src/fonts.ts
++++ b/packages/app/src/fonts.ts
+@@ -1,29 +1,31 @@
+-import { IBM_Plex_Mono, Inter, Roboto, Roboto_Mono } from 'next/font/google';
++import localFont from 'next/font/local';
+ 
+-export const ibmPlexMono = IBM_Plex_Mono({
+-  weight: ['300', '400', '500', '600', '700'],
+-  subsets: ['latin'],
++export const ibmPlexMono = localFont({
++  src: [
++    { weight: '300', path: '../public/fonts/IBMPlexMono-Light.ttf' },
++    { weight: '400', path: '../public/fonts/IBMPlexMono-Regular.ttf' },
++    { weight: '500', path: '../public/fonts/IBMPlexMono-Medium.ttf' },
++    { weight: '600', path: '../public/fonts/IBMPlexMono-SemiBold.ttf' },
++    { weight: '700', path: '../public/fonts/IBMPlexMono-Bold.ttf' },
++  ],
+   variable: '--font-ibm-plex-mono',
+   display: 'swap',
+ });
+ 
+-export const robotoMono = Roboto_Mono({
+-  weight: ['100', '300', '400', '500', '700'],
+-  subsets: ['latin'],
++export const robotoMono = localFont({
++  src: '../public/fonts/RobotoMono[wght].ttf',
+   variable: '--font-roboto-mono',
+   display: 'swap',
+ });
+ 
+-export const inter = Inter({
+-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+-  subsets: ['latin'],
++export const inter = localFont({
++  src: '../public/fonts/Inter[opsz,wght].ttf',
+   variable: '--font-inter',
+   display: 'swap',
+ });
+ 
+-export const roboto = Roboto({
+-  weight: ['100', '300', '400', '500', '700'],
+-  subsets: ['latin'],
++export const roboto = localFont({
++  src: '../public/fonts/Roboto[wdth,wght].ttf',
+   variable: '--font-roboto',
+   display: 'swap',
+ });
